@@ -26,13 +26,13 @@ In MATLAB, the script 'process_movie.m' will load the segmented data and compute
 
 ```max_stde``` - the maximum standard error of each cell at each frame
 
-```inview_cells``` - a logical array indicating if the cell is "in view". Cells which are not "in view" have, invaginated, divided, or are future daughter cells.
+```inview_cells``` - a logical array indicating if the cell is "in view". Cells which are not "in view" have invaginated, divided, or are future daughter cells.
 
-```subgraph_size``` - the size of each subgraph (scalar)
+```subgraph_size``` - the size of each subgraph
 
 ```samples_per_frame``` - the number of subgraph samples per frame
 
-```batch_size``` - the number of subgraphs to sample in batch which speeds up the sampling process
+```batch_size``` - the number of subgraphs to sample in batch, which speeds up the sampling process
 
 ```dropout``` - the fraction of subgraphs to forget after each frame
 
