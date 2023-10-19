@@ -38,6 +38,8 @@ In MATLAB, the script 'process_movie.m' will load the segmented data and compute
 
 The Green strain can be computed using the function 'compute_strain_stretch.m'. This function also can return the right and left Cauchy-Green deformation tensors, the principal stretches, and their corresponding eigenvectors. 'compute_strain_stretch.m' is called at the end of 'process_movie.m'.
 
+By default the parameters ```samples_per_frame``` and ```batch_size``` are set to 50,000 and 1,000 respectively. Once you have tested to make sure the code is running ```samples_per_frame``` should be increased to 100,000 or even 1,000,000 and ```batch_size``` should be increased to 5,000 or 10,000.
+
 ## Visualization
 
 'process_movie.m' will export a sequence of .vtk files which can be loaded by Paraview. Each vtk file contains:
