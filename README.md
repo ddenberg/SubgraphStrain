@@ -21,9 +21,23 @@ This project utilizes the published segmentation data found in "[Deconstructing 
 
 The files 'Deconstructing Gastrulation - Data.zip' and 'Deconstructing Gastrulation - Code.zip' should be extracted into the ./data directory in this repository.
 
-## Running
+The folder structure before running the code should be: 
+```
+├── data
+│   ├── Img_1620 (intercalations)
+│   │   ├── ...
+│   ├── Img_1830 (divisions)
+│   │   ├── ...
+│   ├── DG_calc_cell_areas.m
+│   ├── ...
+│   ├── full_lineage_preprocess.mat
+├── output_vtk
+│   ├── ...
+├── ...
+└── README.md
+```
 
-Before running 'process_movie.m', create a folder called 'output_vtk' in this directory.
+## Running
 
 In MATLAB, the script 'process_movie.m' will load the segmented data and compute the deformation gradient and strain for each cell in the embryo. The results will be saved to a file called 'output.mat' which contains:
 
