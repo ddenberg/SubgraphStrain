@@ -4,9 +4,9 @@ This code in this repository will reproduce the analysis in "Computing Whole Emb
 
 ## Setup
 
-Download/Clone this repository into a location of your choosing. MATLAB version R2022a was used to develop this code, but versions newer than R2012a should work as well. Additionally, the image processing toolbox addon for MATLAB was used for the function 'regionprops'.
+Download/Clone this repository into a location of your choosing. MATLAB version R2022a (tested on Windows 10 and Ubuntu 22.04) was used to develop this code, but versions newer than R2012a should work as well. Additionally, the image processing toolbox addon for MATLAB was used for the function 'regionprops'.
 
-For visualization we recommend the tool Paraview which can be downloaded here: [https://www.paraview.org/download/](https://www.paraview.org/download/). 
+For visualization, we recommend the tool Paraview which can be downloaded here: [https://www.paraview.org/download/](https://www.paraview.org/download/). 
 
 ## Prerequisite data
 
@@ -39,6 +39,8 @@ In MATLAB, the script 'process_movie.m' will load the segmented data and compute
 The Green strain can be computed using the function 'compute_strain_stretch.m'. This function also can return the right and left Cauchy-Green deformation tensors, the principal stretches, and their corresponding eigenvectors. 'compute_strain_stretch.m' is called at the end of 'process_movie.m'.
 
 By default the parameters ```samples_per_frame``` and ```batch_size``` are set to 50,000 and 1,000 respectively. Once you have tested to make sure the code is running ```samples_per_frame``` should be increased to 100,000 or even 1,000,000 and ```batch_size``` should be increased to 5,000 or 10,000.
+
+Typical run time for ```samples_per_frame = 100,000``` should be around one hour, depending on your device.
 
 ## Visualization
 
