@@ -8,6 +8,9 @@ This code in this repository will reproduce the analysis in "Computing Whole Emb
 - MATLAB R2012a or newer
 - MATLAB image processing toolbox addon
 
+### System Requirements:
+- At least 8 GB of RAM
+
 Download/Clone this repository into a location of your choosing. MATLAB version R2022a (tested on Windows 10 and Ubuntu 22.04) was used to develop this code, but versions newer than R2012a should work as well. Additionally, the image processing toolbox addon for MATLAB was used for the function 'regionprops'.
 
 While not necessary to run the code, for visualization we recommend the tool Paraview, which can be downloaded here: [https://www.paraview.org/download/](https://www.paraview.org/download/). 
