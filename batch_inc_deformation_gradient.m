@@ -23,9 +23,16 @@ for ii = 1:size(subgraph_list, 1)
     % compute the incremental deformation gradient
     incF_temp = (lambda.' * lambda0) / (lambda0.' * lambda0);
     
-    if any(isnan(incF_temp), 'all')
+    if any(isnan(incF_temp) | isinf(incF_temp), 'all')
         % exclude subgraph if system is ill-conditioned (likely a co-planar set of cells)
         exclude_group(ii) = true;
+    end
+
+    % if abs(det(lambda0.' * lambda0)) < 1e-2 || any(isnan(lambda0), 'all') || any(isnan(lambda), 'all')
+    %     disp('Uh oh');
+    % end
+    if any(isnan(lambda0), 'all') || any(isnan(lambda), 'all')
+        disp('Should never see this.');
     end
 
     incF_list(:,:,ii) = incF_temp;
